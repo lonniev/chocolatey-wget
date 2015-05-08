@@ -17,4 +17,7 @@
 # limitations under the License.
 #
 
-chocolatey 'wget'
+chocolatey 'wget' do
+  action :install
+  options {  "y" => nil, "f" => nil }
+end
