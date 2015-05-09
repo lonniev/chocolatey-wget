@@ -19,6 +19,6 @@
 
 chocolatey 'wget' do
   action :install
-  options "y", "f"
+  options "yf"
   ignore_failure true
 end
