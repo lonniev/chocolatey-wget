@@ -17,8 +17,10 @@
 # limitations under the License.
 #
 
+justDoItOptions = { "y" => nil, "f" => nil }
+  
 chocolatey 'wget' do
   action :install
-  options "yf"
+  options justDoItOptions
   ignore_failure true
 end
