@@ -22,5 +22,11 @@ justDoItOptions = { "y" => nil, "f" => nil }
 chocolatey 'wget' do
   action :install
   options justDoItOptions
-  ignore_failure true
+  not_if { ::File.exists? '/ProgramData/chocolatey/bin/wget.exe' }
+end
+
+chocolatey 'wget' do
+  action :upgrade
+  options justDoItOptions
+  only_if { ::File.exists? '/ProgramData/chocolatey/bin/wget.exe' }
 end
