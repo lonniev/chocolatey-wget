@@ -30,3 +30,7 @@ chocolatey 'Wget' do
   options justDoItOptions
   only_if { ::File.exists? '/ProgramData/chocolatey/bin/wget.exe' }
 end
+
+windows_path "C:\ProgramData\chocolatey\bin" do
+  action :add
+end
